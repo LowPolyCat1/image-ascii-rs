@@ -1,0 +1,17 @@
+[package]
+name = "image-ascii-rs"
+version = "0.1.0"
+edition = "2024"
+
+
+[dependencies]
+image = { version = "0.25.6" }
+clap = { version = "4.5.40", features = ["derive"] }
+
+
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = 3
+debug = false
+panic = "abort"
